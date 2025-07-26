@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - InfinityShop</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76A09cA2E3C2hYXzjXc+LCe1FZ9F4pOCaO5bNJl9zYyN7zzO3paNdF+R3OK8z+E"
+            crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .btn{
+            background-color:  #1a3d7a;
+        }
+        body {
+            background-color: azure;
+        }
+        .form-hold {
+            margin-top: 3%;
+            margin-left: 35%;
+            background-color: white;
+            padding: 30px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .textholder {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 500;
+            margin-top: 40px;
+            color: #1a3d7a;
+        }
+        .btn-black {
+            background-color: black;
+            color: white;
+        }
+        .btn-black:hover {
+            background-color: #333;
+            color: white;
+        }
+        .submit-btn{
+            text-decoration: none;
+            color:white;
+            text-decoration-line: none;
+            text-emphasis-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="logo">TravelWithUs</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+    
+      <a href="choice.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+<!-- Navbar -->
+
+
+<!-- Page Title -->
+<div class="textholder">
+    <h1>Signup</h1>
+</div>
+
+<!-- Signup Form -->
+<div class="form-hold">
+    <form action="#" method="POST">
+        <!-- name -->
+        <div class="mb-3">
+            <label for="name" class="form-label"><b>Name</b></label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- address -->
+         <div class="mb-3">
+            <label for="name" class="form-label"><b>Address</b></bAddress></label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+         </div>
+
+        <!-- email -->
+        <div class="mb-3">
+            <label for="email" class="form-label"><b>Email address</b></label>
+            <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+        </div>
+
+        <!-- password -->
+        <div class="mb-3">
+            <label for="password" class="form-label"><b>Password</b></label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="number" class="form-label"><b>Mobile no.</b></label>
+            <input type="number" class="form-control" id="mobile" placeholder="Enter number"required>
+        </div>
+
+        <!-- button signup -->
+        <div class="mb-3 text-center">
+            <button type="submit" class="btn  w-100"><a class="submit-btn" href="choice.html">Signup</a></button>
+        </div>
+    </form>
+    <p class="text-center mt-3">Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", // Beach
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb", // Mountain
+      "https://images.unsplash.com/photo-1526779259212-756e0e86a5a0", // Temple
+      "https://images.unsplash.com/photo-1493558103817-58b2924bce98", // Eiffel Tower
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d"  // Plane
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+
+    // Set initial image
+    changeBackground();
+
+    // Change every 6 seconds
+    setInterval(changeBackground, 6000);
+  </script>
+
+</body>
+</html>

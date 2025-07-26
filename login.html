@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style3.css">
+    <title>Foody World</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76A09cA2E3C2hYXzjXc+LCe1FZ9F4pOCaO5bNJl9zYyN7zzO3paNdF+R3OK8z+E"
+        crossorigin="anonymous"></script>
+
+    <style>
+         a{
+            text-decoration:none;
+            text-decoration-line: none;
+            color:white;
+        }
+        body {
+        background-color: azure;
+     }
+
+        .form1 {
+            max-width: 600px;
+            background-color: rgb(234, 255, 255);
+            border-radius: 8px;
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        h3 {
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+       <div class="navbar">
+    <div class="logo">TravelWithUs</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+    
+      <a href="choice.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+    
+    
+
+   
+    <div class="container d-flex justify-content-center">
+        <form class="form1 w-100" action="/login" method="POST">
+    <h2 class="text-center mb-4">TravelWithUs🧳</h2>
+    <caption><center>We serve the society, we serve the world!</center></caption><br>
+    <h3 class="text-center mb-4">Login Here</h3>
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="Username" placeholder="Enter your name" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="email" name="useremail" placeholder="Enter your email" required>
+</div>
+
+    <div class="mb-4">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter valid password" required>
+    </div>
+
+    <div class="text-end">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+    </div>
+
+    
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", // Beach
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb", // Mountain
+      "https://images.unsplash.com/photo-1526779259212-756e0e86a5a0", // Temple
+      "https://images.unsplash.com/photo-1493558103817-58b2924bce98", // Eiffel Tower
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d"  // Plane
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+
+    // Set initial image
+    changeBackground();
+
+    // Change every 6 seconds
+    setInterval(changeBackground, 6000);
+  </script>
+
+</body>
+</html>
